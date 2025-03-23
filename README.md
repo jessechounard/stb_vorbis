@@ -1,4 +1,4 @@
-# stb_image
+# stb_vorbis
 This is [stb_vorbis from stb](https://github.com/nothings/stb), packaged for [Zig](https://ziglang.org/). (Intended for C or C++ projects using Zig as a build tool.)
 
 ## Usage
