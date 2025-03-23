@@ -20,5 +20,25 @@ exe.root_module.linkLibrary(stb_vorbis_lib);
 
 Finally, in your C++ file, you can use the library:
 ```cpp
-// add example
-```
+#include <stdio.h>
+#include <stdint.h>
+#include <stb_vorbis.h>
+
+int main() {
+    stb_vorbis *vorbis = stb_vorbis_open_filename("vorbis.ogg", nullptr, nullptr);
+    if (!vorbis) {
+        printf("Loading vorbis failed!\n");
+    } else {
+        stb_vorbis_info info = stb_vorbis_get_info(vorbis);
+        printf("vorbis info:\n"
+               "    file:          %s\n"
+               "    channels:      %d\n"
+               "    sample rate:   %d\n",
+            "vorbis.ogg",
+            info.channels,
+            info.sample_rate);
+        stb_vorbis_close(vorbis);
+    }
+
+    return 0;
+}```
