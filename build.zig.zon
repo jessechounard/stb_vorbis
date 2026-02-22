@@ -1,7 +1,7 @@
 .{
     .name = .stb_vorbis,
     .version = "1.22.0",
-    .minimum_zig_version = "0.14.0",
+    .minimum_zig_version = "0.15.0",
     .fingerprint = 0x25a773ddc2488664,
     .dependencies = .{
         .stb_vorbis = .{
